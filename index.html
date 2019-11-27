@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Moment.js Playground</title>
+    <script>
+        function evalBox() {
+            document.getElementById("result").value = moment.utc(document.getElementById("script").value).unix();
+        }
+    </script>
+    <script src="moment.min.js" async></script>
+</head>
+
+<body>
+    <p>Date:</p>
+    <div><textarea id="script" rows="10" cols="80">2000-01-01</textarea></div>
+    <p>Unix timestamp (seconds):</p>
+    <div><textarea id="result" rows="10" cols="80" readonly></textarea></div>
+    <p><button type="button" onclick="evalBox()">Run</button>
+    </p>
+</body>
+
+</html>
